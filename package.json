@@ -1,6 +1,6 @@
 {
   "name": "@bariscelik/llama.rn",
-  "version": "0.6.15",
+  "version": "0.6.16",
   "description": "React Native binding of llama.cpp",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
