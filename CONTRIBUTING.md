@@ -34,7 +34,7 @@ Remember to add tests for your change if possible. Run the unit tests by:
 npm test
 ```
 
-To edit the Objective-C or Swift files, open `example/ios/RNLlamaExample.xcworkspace` in XCode and find the source files at `Pods > Development Pods > llama.rn`.
+To edit the Objective-C or Swift files, open `example/ios/RNLlamaExample.xcworkspace` in XCode and find the source files at `Pods > Development Pods > @bariscelik/llama.rn`.
 
 ### Commit message convention
 

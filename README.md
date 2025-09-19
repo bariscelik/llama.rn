@@ -1,8 +1,8 @@
-# llama.rn
+# @bariscelik/llama.rn
 
-[![Actions Status](https://github.com/mybigday/llama.rn/workflows/CI/badge.svg)](https://github.com/mybigday/llama.rn/actions)
+[![Actions Status](https://github.com/bariscelik/llama.rn/workflows/CI/badge.svg)](https://github.com/bariscelik/llama.rn/actions)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![npm](https://img.shields.io/npm/v/llama.rn.svg)](https://www.npmjs.com/package/llama.rn/)
+[![npm](https://img.shields.io/npm/v/@bariscelik/llama.rn.svg)](https://www.npmjs.com/package/@bariscelik/llama.rn/)
 
 React Native binding of [llama.cpp](https://github.com/ggerganov/llama.cpp).
 
@@ -11,25 +11,25 @@ React Native binding of [llama.cpp](https://github.com/ggerganov/llama.cpp).
 ## Installation
 
 ```sh
-npm install llama.rn
+npm install @bariscelik/llama.rn
 ```
 
 #### iOS
 
 Please re-run `npx pod-install` again.
 
-By default, `llama.rn` will use pre-built `rnllama.xcframework` for iOS. If you want to build from source, please set `RNLLAMA_BUILD_FROM_SOURCE` to `1` in your Podfile.
+By default, `@bariscelik/llama.rn` will use pre-built `rnllama.xcframework` for iOS. If you want to build from source, please set `RNLLAMA_BUILD_FROM_SOURCE` to `1` in your Podfile.
 
 #### Android
 
 Add proguard rule if it's enabled in project (android/app/proguard-rules.pro):
 
 ```proguard
-# llama.rn
+# @bariscelik/llama.rn
 -keep class com.rnllama.** { *; }
 ```
 
-By default, `llama.rn` will use pre-built libraries for Android. If you want to build from source, please set `rnllamaBuildFromSource` to `true` in `android/gradle.properties`.
+By default, `@bariscelik/llama.rn` will use pre-built libraries for Android. If you want to build from source, please set `rnllamaBuildFromSource` to `true` in `android/gradle.properties`.
 
 ## Obtain the model
 
@@ -44,7 +44,7 @@ For get a GGUF model or quantize manually, see [`Prepare and Quantize`](https://
 Load model info only:
 
 ```js
-import { loadLlamaModelInfo } from 'llama.rn'
+import { loadLlamaModelInfo } from '@bariscelik/llama.rn'
 
 const modelPath = 'file://<path to gguf model>'
 console.log('Model Info:', await loadLlamaModelInfo(modelPath))
@@ -53,7 +53,7 @@ console.log('Model Info:', await loadLlamaModelInfo(modelPath))
 Initialize a Llama context & do completion:
 
 ```js
-import { initLlama } from 'llama.rn'
+import { initLlama } from '@bariscelik/llama.rn'
 
 // Initial a Llama context with the model (may take a while)
 const context = await initLlama({
@@ -146,7 +146,7 @@ First, you need a multimodal model and its corresponding multimodal projector (m
 ### Initialize Multimodal Support
 
 ```js
-import { initLlama } from 'llama.rn'
+import { initLlama } from '@bariscelik/llama.rn'
 
 // First initialize the model context
 const context = await initLlama({
@@ -272,7 +272,7 @@ console.log('Media positions:', tokenizeResult.chunk_pos_media)
 Example:
 
 ```js
-import { initLlama } from 'llama.rn'
+import { initLlama } from '@bariscelik/llama.rn'
 
 const context = await initLlama({
   // ...params
@@ -360,7 +360,7 @@ ws ::= | " " | "\n" [ \t]{0,20}
 ```
 
 ```js
-import { initLlama } from 'llama.rn'
+import { initLlama } from '@bariscelik/llama.rn'
 
 const gbnf = '...'
 

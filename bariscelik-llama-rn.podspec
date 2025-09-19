@@ -13,7 +13,7 @@ end
 base_optimizer_flags = "-O3 -DNDEBUG"
 
 Pod::Spec.new do |s|
-  s.name         = "llama-rn"
+  s.name         = "bariscelik-llama-rn"
   s.version      = package["version"]
   s.summary      = package["description"]
   s.homepage     = package["homepage"]
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.authors      = package["author"]
 
   s.platforms    = { :ios => "13.0", :tvos => "13.0" }
-  s.source       = { :git => "https://github.com/mybigday/llama.rn.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/bariscelik/llama.rn.git", :tag => "#{s.version}" }
 
   if ENV["RNLLAMA_BUILD_FROM_SOURCE"] == "1"
     s.source_files = "ios/**/*.{h,m,mm}", "cpp/**/*.{h,cpp,hpp,c,m,mm}"
